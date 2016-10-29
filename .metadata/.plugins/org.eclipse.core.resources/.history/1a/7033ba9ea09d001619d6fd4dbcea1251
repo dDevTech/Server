@@ -1,0 +1,19 @@
+package Cliente;
+
+import java.awt.Color;
+import java.awt.FlowLayout;
+
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+
+public class Panel extends JPanel{
+	JPanel mensajeria= new JPanel(new FlowLayout(FlowLayout.CENTER));
+	JTextArea sistemaMensajes= new JTextArea(25,200);
+	public Panel(){
+		this.setBackground(Color.black);
+		mensajeria.add(sistemaMensajes);
+		this.add(mensajeria);		
+
+	}
+	
+}

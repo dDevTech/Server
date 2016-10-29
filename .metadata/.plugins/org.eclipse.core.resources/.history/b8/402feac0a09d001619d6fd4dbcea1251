@@ -1,0 +1,19 @@
+package Cliente;
+
+import javax.swing.JFrame;
+
+public class Ventana extends JFrame{
+	
+	public Ventana(){
+		setTitle("Server");
+		this.setExtendedState(MAXIMIZED_BOTH);
+		this.setContentPane(new Panel());
+		this.setLocationRelativeTo(null);
+	}
+	public Ventana(int width,int height){
+		setTitle("Server");
+		this.setSize(width, height);
+		this.setContentPane(new Panel());
+		this.setLocationRelativeTo(null);
+	}
+}

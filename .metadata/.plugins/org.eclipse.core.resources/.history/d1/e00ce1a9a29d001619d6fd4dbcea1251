@@ -1,0 +1,42 @@
+package Cliente;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.LayoutManager;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class Panel extends JPanel{
+	JPanel contenedorIP= new JPanel(new FlowLayout(FlowLayout.CENTER)); 
+	JPanel mensajeria= new JPanel(new FlowLayout(FlowLayout.CENTER));
+	JPanel envio= new JPanel(new FlowLayout(FlowLayout.CENTER));
+	JTextArea sistemaMensajes= new JTextArea(25,50);
+	JTextField mensaje = new JTextField(40);
+	JLabel ip = new JLabel("IP");
+	
+	
+	public Panel(){
+		this.setLayout(new BorderLayout());
+		this.setBackground(Color.black);
+		ip.setForeground(Color.WHITE);
+		contenedorIP.add(ip);
+		contenedorIP.setBackground(null);
+		
+		mensajeria.add(sistemaMensajes);
+		mensajeria.setBackground(null);
+		envio.add(mensaje);
+		envio.setBackground(null);
+		mensaje.setFont(new Font("Sheriff",Font.BOLD,20));
+		
+		this.add(contenedorIP,BorderLayout.NORTH);	
+		this.add(mensajeria,BorderLayout.CENTER);		
+		this.add(envio,BorderLayout.SOUTH);
+
+	}
+	
+}
